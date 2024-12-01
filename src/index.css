@@ -9,5 +9,51 @@ body {
   width: 30px;
   margin-right: 10px;
 }
+img {
+  max-width: 150px;
+  max-height: 250px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+
+}
+.book {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  text-align: center;
+}
+.navbar {
+
+display: flex;
+justify-content: space-evenly;
+background-color: black;
+height: 25px;
+margin-bottom: 10px;
+}
+.link {
+  color: white;
+  font-size: large;
+}
+.fName {
+margin-bottom: 10px;
+}
+.lName {
+  margin-bottom: 10px;
+}
+.email {
+  margin-bottom: 10px;
+}
+.password {
+  margin-bottom: 10px;
+}
 /* Add your own custom styles here */
