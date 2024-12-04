@@ -5,10 +5,11 @@ import {useParams} from 'react-router-dom';
 import { useState } from 'react';
 import { fetchBookById } from '../API';
 import { useEffect } from 'react';
+import { getReservation } from '../API';
 
 export default function SingleBook() {
     let params = useParams()
-   
+  
     const [bookData, setBookData] = useState({});
 
     
@@ -35,6 +36,9 @@ export default function SingleBook() {
       <h2>{bookData.book.author}</h2>
 
       <h3>{bookData.book.description}</h3>
+      <button type='submit' onClick={(token) =>{
+       
+      }}>Checkout Book</button>
       </div>
       
 

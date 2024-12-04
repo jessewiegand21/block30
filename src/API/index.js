@@ -66,3 +66,36 @@ export async function fetchBookById(id) {
     console.log(`trouble fetching book ${id} `);
   }
 }
+export async function getReservation(token) {
+  try {
+    const response = await fetch(`${apiUrl}/reservations`, {
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const result = await response.json();
+    if (response.ok) {
+      console.log(result);
+      return result;
+    }
+  } catch (error) {
+    console.log("error");
+  }
+}
+export async function deleteReservation(token, id) {
+  try {
+    const result = await fetch(`${apiUrl}/reservations/`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    if (response.ok) {
+      console.log(result);
+      return result;
+    }
+  } catch (error) {
+    console.log("error");
+  }
+}
+export async function checkoutBook(token) {}
